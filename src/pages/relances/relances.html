@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-navbar>
+      <ion-img width="40" height="40" src="../assets/imgs/devizen.png"></ion-img>  </ion-navbar>
+    <ion-title>Mes Relances</ion-title>
+</ion-header>
+<ion-searchbar [(ngModel)]="myInput" [showCancelButton]="shouldShowCancel"></ion-searchbar>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <ion-img width="30" height="30" src="../assets/icon/warning.png"></ion-img>
+      <h2>En retard</h2>
+      <div class="relance">
+        <h1>9</h1>
+        <h6>Relances</h6>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card (click)="today()">
+    <ion-card-content>
+      <ion-img width="30" height="30" src="../assets/icon/calendar.png"></ion-img>
+      <h2>Aujourd'hui</h2>
+      <div class="relance">
+        <h1>2</h1>
+        <h6>Relances</h6>
+      </div>
+    </ion-card-content>
+  
+  </ion-card>
+  <ion-card-content *ngIf="todayList">
+      <ion-list>
+        <ion-item>test</ion-item>
+        <ion-item>test</ion-item>
+        <ion-item>test</ion-item>
+      </ion-list>
+    </ion-card-content>
+  <ion-card>
+    <ion-card-content>
+      <ion-img width="30" height="30" src="../assets/icon/clock.png"></ion-img>
+      <h2>Demain</h2>
+      <div class="relance">
+        <h1>1</h1>
+        <h6>Relances</h6>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <ion-img width="30" height="30" src="../assets/icon/rocket.png"></ion-img>
+      <h2>A venir</h2>
+      <div class="relance">
+        <h1>4</h1>
+        <h6>Relances</h6>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

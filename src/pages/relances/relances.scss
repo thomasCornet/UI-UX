@@ -1,0 +1,109 @@
+page-relances{
+    h2,h4,h6{
+        font-family: "Coltan Gea"
+    }
+    ion-searchbar{        
+        .searchbar-input-container{            
+            .searchbar-input{
+                border-radius: 20px;
+            }
+        }
+     }
+     .searchbar-md .searchbar-input{
+         height:3rem;
+     }
+     .searchbar-md .searchbar-search-icon{
+         top:6px;
+     }
+    
+     ion-card-content{
+         display:flex;
+         align-items: center;
+         justify-content: space-around;
+     }
+     ion-content{
+         display:flex;
+         align-items: center;
+     }
+    
+     ion-img{
+         background-color: transparent;
+     }
+     .card-md{
+        border-radius:10px;
+        margin: 20px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        width: calc(100% - 40px);
+     }
+     .card-md h1{
+        color:	#e8702a
+     }
+     .card-md h6{
+        color:#0c457d   
+     }
+     .card-md h2{
+        color:#0c457d   
+     }
+     .card-content-md{
+         padding:5px 8px;
+     }
+
+     .card-ios{
+        border-radius:10px;
+        margin: 20px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        width: calc(100% - 40px);
+     }
+     .card-ios h1{
+        color:	#e8702a
+     }
+     .card-ios h6{
+        color:#0c457d   
+     }
+     .card-ios h2{
+        color:#0c457d   
+     }
+     .card-content-ios{
+         padding:5px 8px;
+     }
+
+     .toolbar-md{
+         min-height: 0px;
+     }
+     .toolbar-ios{
+        min-height: 0px;
+    }
+    .card-ios ion-list{
+        width:100%
+    }
+    .card-md ion-list{
+        width:100%
+    }
+    .list-ios > .item-block{
+        background-color: blue;
+    }
+
+    ion-list > ion-item{
+        perspective: 1000px;
+        opacity: 0;
+        transform-origin:top center;
+        @for $i from 0 to 4{
+            &:nth-child(#{$i}){
+                animation: menu2 300ms (280ms * $i) - 300 ease-in-out forwards; 
+            }
+        }
+    }
+    @keyframes menu2 {
+        0%{
+            opacity: 0;
+            transform:rotateX(-90deg)
+        }
+        100%{
+            opacity: 1;
+            transform:rotateX(0deg)
+        }
+        
+    }
+}

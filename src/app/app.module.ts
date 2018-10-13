@@ -5,12 +5,24 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { RelancesPage } from '../pages/relances/relances';
+import { ClientsPage } from '../pages/clients/clients';
+import { ProspectsPage } from '../pages/prospects/prospects';
+import { OutilsPage } from '../pages/outils/outils';
+import { ParametresPage } from '../pages/parametres/parametres';
+
+
+import { TabsPage } from '../tabs/tabs'
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    TabsPage,
+    RelancesPage,
+    ClientsPage,
+    ProspectsPage,
+    OutilsPage,
+    ParametresPage
   ],
   imports: [
     BrowserModule,
@@ -19,12 +31,17 @@ import { HomePage } from '../pages/home/home';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    RelancesPage,
+    TabsPage,
+    ClientsPage,
+    ProspectsPage,
+    OutilsPage,
+    ParametresPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
-export class AppModule {}
+export class AppModule { }

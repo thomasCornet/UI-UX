@@ -1,0 +1,28 @@
+<ion-content>
+
+
+  <ion-slides #SwipedTabsSlider (ionSlideDrag)="animateIndicator($event)" (ionSlideWillChange)="updateIndicatorPosition()"
+    (ionSlideDidChange)="updateIndicatorPosition()" (pan)="updateIndicatorPosition()" [pager]="false">
+    <ion-slide>
+      <page-relances></page-relances>
+    </ion-slide>
+    <ion-slide>
+      <page-prospects></page-prospects>
+    </ion-slide>
+    <ion-slide>
+      <page-clients></page-clients>
+    </ion-slide>
+    <ion-slide>
+      <page-outils></page-outils>
+    </ion-slide>
+    <ion-slide>
+      <page-parametres></page-parametres>
+    </ion-slide>
+  </ion-slides>
+  <ion-segment class="SwipedTabs-tabs">
+      <ion-segment-button *ngFor='let tab of tabs ; let i = index ' value="IngoreMe" (click)="selectTab(i)" [ngClass]='{ "SwipedTabs-activeTab" : ( this.SwipedTabsSlider  && ( this.SwipedTabsSlider.getActiveIndex() === i || (  tabs.length -1 === i&& this.SwipedTabsSlider.isEnd()))) }'>
+        <ion-icon name={{tab}}></ion-icon>
+      </ion-segment-button>
+    </ion-segment>
+    <div id='indicator' class="SwipedTabs-indicatorSegment" [ngStyle]="{'width.%': (100/this.tabs.length)}"></div>
+</ion-content>

@@ -1,0 +1,41 @@
+page-tabs {
+
+    ion-content{
+        background-image: linear-gradient(to right top, #2a5298 ,#1e3c72 );
+    }
+    ion-slides{
+        height:93%;
+
+    }
+    .SwipedTabs-indicatorSegment{ //Trait en dessous du titres sélectionnés
+        transition:  0.3s all;
+        height: 2px;
+        position: relative;
+        top: -1px;
+	    background-color: rgb(218, 177, 101) !important;
+    }
+    .SwipedTabs-tabs //trait pour titre non séléctionné
+    {
+        border-bottom: solid 1px transparent  !important; 
+        display:flex;
+        justify-content: space-evenly;
+    }
+   
+    ion-segment{
+        height:6.5%;
+    }
+    .SwipedTabs-tabs ion-segment-button //Titre non séléctionné
+    {
+    	border:none !important;
+    	color:rgba(212, 209, 209, 0.801)!important;
+        background-color: transparent!important ;
+        text-transform: uppercase;
+    }
+
+    .SwipedTabs-tabs ion-segment-button.SwipedTabs-activeTab //Titre sélectionné
+    {
+        color:white !important; 
+    }
+    
+   
+}

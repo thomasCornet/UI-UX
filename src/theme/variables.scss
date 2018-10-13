@@ -23,6 +23,16 @@ $app-direction: ltr;
 // http://ionicframework.com/docs/theming/overriding-ionic-variables/
 
 
+@font-face {
+  font-family: 'Coltan Gea';
+  font-weight: 600;
+  src: url('../assets/fonts/Coltan-Gea-Bold.ttf');
+}
+@font-face {
+  font-family: 'Coltan Gea Light';
+  font-weight: 600;
+  src: url('../assets/fonts/Coltan-Gea-Light.ttf');
+}
 
 
 // Named Color Variables
@@ -40,12 +50,22 @@ $colors: (
   light:      #f4f4f4,
   dark:       #222
 );
-
-
+$searchbar-ios-input-background-color:	rgba(255,255,255,0.4);
+$searchbar-ios-background-color:rgba(255,255,255,0.7);
 // App iOS Variables
+$searchbar-md-input-background-color:rgba(255,255,255,0.4);
+$searchbar-md-input-text-color:white;
+$searchbar-ios-input-text-color:white;
+$searchbar-md-input-clear-icon-color:rgba(255,255,255,0.4);
+$searchbar-ios-input-clear-icon-color	:rgba(255,255,255,0.5);
+$searchbar-md-input-placeholder-color:rgba(255,255,255,0.4);
+$searchbar-ios-input-placeholder-color:rgba(255,255,255,0.4);
+$searchbar-md-input-search-icon-color:rgba(255,255,255,0.4);
+$searchbar-ios-input-search-icon-color:rgba(255,255,255,0.4);
+$card-md-background-color:white;
+
 // --------------------------------------------------
 // iOS only Sass variables can go here
-
 
 
 
